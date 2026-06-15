@@ -44,3 +44,4 @@ void main() {
         System.out.println("Average = " + average);
         System.out.println();
     }
+}
