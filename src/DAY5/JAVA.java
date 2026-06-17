@@ -38,8 +38,7 @@
         }
     }
      */
-
-public class day5 {
+/*public class dayyy9{
 
     static class Student {
         String name, dept;
@@ -108,4 +107,30 @@ public class day5 {
         s3.show();
     }
 }
+/
+ */
+/*
+public class JAVA{
+    static void main(){
+        String[] student={"divi","thanya","sri","Dharani"};
+        System.out.println(student.length);
 
+        list.add("divi");
+        list.add("thanya");
+        list.add("sri");
+        list.add("Dharani");
+        for(String s: list) {
+            System.out.print(s);
+        }
+        list.add("subi");
+
+        list.remove("sri");
+        System.out.println();
+        System.out.println(list.getFirst());
+        System.out.println(list.getLast());
+        System.out.println();
+
+
+    }
+}
+*/
