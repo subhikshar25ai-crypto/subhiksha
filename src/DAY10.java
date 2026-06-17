@@ -1,7 +1,7 @@
 public class day11{
 
     static void main() {
-        String name = null;
+        String name = "subi";
         try {
             System.out.println(name.charAt(0));
             System.out.println(45/0);
@@ -13,7 +13,7 @@ public class day11{
             System.out.println("Exception");
         } finally {
             System.out.println("This will always execute");
-            name="";
+            name="subi";
         }
         System.out.println("Still running");
         System.out.println("Name :"+name);
