@@ -1,34 +1,33 @@
 public class dayy14 {
-    interface notification {
+    interface Notification{
         void send(String to, String message);
     }
-
-    class emailnotification implements notification {
+    class CreditNotification implements Notification{
         @Override
-        public void send(String to, String message) {
-            System.out.println("sending email" + message + "to");
+        public void send(String to, String message){
+            System.out.println("Amount Credited 200: "+message+", to"+to);
+        }
+
+    }
+    class DebitNotification implements Notification{
+        @Override
+        public void send(String to, String message){
+            System.out.println("Amount Debited 500: "+message+", to"+to);
         }
     }
-
-    class whatsappnotification implements notification {
-        @Override
-        public void send(String to, String message) {
-            System.out.println("sending whatsapp" + message + "to");
-        }
-    }
-
-    static notification getnotification(dayy14 factory, String type) {
-        return switch (type) {
-            case "Email" -> factory.new emailnotification();
-            case "Whatsapp" -> factory.new whatsappnotification();
-            default -> throw new IllegalArgumentException
-                    ("Invalid notification type: " + type);
+    static Notification getNotification(dayy14 factory, String type){
+        return switch (type){
+            case"Credit"-> factory.new CreditNotification();
+            case"Debit"-> factory.new DebitNotification();
+            default -> throw new IllegalArgumentException("Invalid account type:"+ type);
         };
     }
-
-    static void main() {
-        dayy14 factory =new dayy14();
-        String type = "whatsapp";
-        getnotification(factory, type).send("192826413", "hello java");
+    static void main(){
+        dayy14 factory = new dayy14();
+        String type = "Credit";
+        getNotification(factory,type).send(" 123467798","Amount 800 credited");
     }
 }
+
+
+
