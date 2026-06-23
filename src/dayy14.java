@@ -12,7 +12,7 @@ public class dayy14 {
     class DebitNotification implements Notification{
         @Override
         public void send(String to, String message){
-            System.out.println("Amount Debited 500: "+message+", to"+to);
+            System.out.println("Amount Debited 200: "+message+", to"+to);
         }
     }
     static Notification getNotification(dayy14 factory, String type){
@@ -25,9 +25,10 @@ public class dayy14 {
     static void main(){
         dayy14 factory = new dayy14();
         String type = "Credit";
-        getNotification(factory,type).send(" 123467798","Amount 800 credited");
+        getNotification(factory,type).send(" subhiksha","\n Amount credit 200");
     }
 }
+
 
 
 
