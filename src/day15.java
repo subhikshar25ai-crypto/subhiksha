@@ -1,3 +1,4 @@
+/*
 public class day15 {
     static void main()throws InterruptedException{
         Runnable chefTask = ()-> {
@@ -17,3 +18,5 @@ public class day15 {
     }
 
 }
+
+ */
